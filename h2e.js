@@ -1,5 +1,6 @@
 const toggleButton = document.getElementById("open-close-btn");
 const sidebar = document.getElementById("sidebar");
+const links = document.querySelectorAll('#sidebar ul li a');
 function toggleSide() {
     sidebar.classList.toggle("close");
     Array.from(sidebar.getElementsByClassName("show")).forEach(ul =>{
@@ -13,3 +14,12 @@ function toggleSubMenu(button) {
         sidebar.classList.toggle("close");
     }
 }
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        sidebar.classList.add("close");
+        Array.from(sidebar.getElementsByClassName("show")).forEach(ul =>{
+            ul.classList.remove("show");
+        });
+    });
+});
