@@ -172,21 +172,24 @@ main{
     .container{
         border: none;
         padding: 0;
+        margin-left: 45px;
     }
     .container .home-heading-span{
         display: inline;
     }
     .side{
-        width: 100%vw;
+        width: 100vw;
     box-sizing: border-box;
     padding: 5px .4em;
-    height: 100vh;
     background-color: black;
     border-right: 1px solid hsl(195, 95%, 50%);
-    position: sticky;
+    position: fixed;
+    left: 0;
     top: 0;
     align-self: start;
-    overflow: hidden;
+    align-items: start;
+    overflow-x: hidden;
+    overflow-y: auto;
     text-wrap: nowrap;
     transition: 300ms ease-in-out;
     z-index: 2;
@@ -195,6 +198,10 @@ main{
 }
  @media(max-width: 400px){
     .side{
-        width: 100%vw;
+        width: 100vw;
+        position: fixed;
+    left: 0;
+    top: 0;
     }
+    
  }
